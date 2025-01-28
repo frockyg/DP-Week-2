@@ -1,0 +1,29 @@
+---
+title: "Beautiful Badajoz!"
+
+date: "2025-01-28"
+output: html_document
+---
+
+```{r setup, include=FALSE,message=FALSE,warning=FALSE}
+knitr::opts_chunk$set(echo = FALSE,warning=FALSE,message=FALSE)
+```
+
+
+## Quick facts
+
+Badajoz is a city in southwest Spain known for its Moorish historic quarter with the fortresslike Cathedral of San Juan Bautista. Overlooking the city, the Alcazaba of Badajoz is a Moorish citadel with fortified walls and verdant gardens. It also encompasses the Provincial Archaeological Museum and the 12th-century Espantaperros Tower. Castelar Park features palm trees and statues of local cultural figures.  
+
+Badajoz is *our* top recommendation as a travel destination within Spain this year.
+
+```{r , echo=FALSE,warning=FALSE,message=FALSE}
+library(leaflet)
+my_map<-leaflet() %>%
+  addTiles()
+my_map<-my_map %>%
+    addMarkers(lat=38.87701413293672,lng= -6.97143967169368,
+              popup="Badajoz Old Quarter")
+ 
+my_map
+```
+
